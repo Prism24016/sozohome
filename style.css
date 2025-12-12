@@ -1,0 +1,511 @@
+@charset "UTF-8";
+
+html {
+  font-size: 62.5%;
+}
+
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+:root {
+  --text: #313131;
+  --white: #fff;
+  --tel: #FF914B;
+  --mail: #63AABF;
+  --line: #23C17D;
+  --tel_bg: #FFF9F1;
+  --mail_bg: #EBFAFF;
+  --line_bg: #F5FFF4;
+}
+
+/* 背景の薄暗いオーバーレイ */
+.popup {
+  display: none;
+  /* 最初は非表示 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* ポップアップ本体 */
+/* .popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+} */
+
+/* 閉じるボタン */
+.popup-close {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.popup-img-pc {
+  max-width: 600px;
+}
+
+.popup-img-sp {
+  display: none;
+}
+
+/* ベース */
+.hero {
+  /*   position: relative; */
+  color: #484848;
+  /* コラージュ画像一枚を背景にする */
+  /*   background-image: url("img/hero-bg.jpg"); */
+  /*   background-size: cover; */
+  /*   background-position: center; */
+}
+
+/* 上のエリア（白パネル部分） */
+.hero__inner {
+  /*   max-width: 1200px; */
+  /*   margin: 0 auto; */
+  padding: 40px 16px 30px 0;
+  /*   display: flex; */
+  /*   align-items: flex-start; */
+  /*   min-height: 260px; */
+  background: #555;
+}
+
+.hero__panel {
+  font-family: "Noto Sans JP", sans-serif;
+  background: var(--white);
+  padding: 30px 0px 40px 70px;
+  max-width: 670px;
+  /*   box-shadow: 0 4px 12px rgba(0,0,0,0.08); */
+}
+
+.hero__tagline {
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  letter-spacing: 0.2em;
+}
+
+.border-line {
+  border-top: 5px solid #FFA75E;
+  width: 220px;
+  display: inline-block;
+}
+
+.hero__sub {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  letter-spacing: 0.15em;
+}
+
+.hero__count {
+  /*   font-weight: 700; */
+  margin-right: 4px;
+}
+
+.hero__count span {
+  font-size: 3.8rem;
+  color: #23C1B2;
+}
+
+.hero__text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  letter-spacing: 0.08em;
+}
+
+.hero__free {
+  color: #23C1B2;
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+
+/* ボタン */
+.hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  /*   font-weight: 700; */
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-box-line {
+  margin-right:30px;
+}
+
+.btn--primary {
+  background: var(--mail);
+  color: var(--white);
+  width: 220px;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+
+.btn--secondary {
+  background: var(--tel);
+  color: var(--white);
+  width: 220px;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+
+/* ▼ 下部3つボタン＋白帯エリア ▼ */
+
+.hero-cta {
+  position: relative;
+  font-size: 14px;
+}
+
+/* 上の細いカラー帯（3つ横並び） */
+.hero-cta__tabs {
+  display: flex;
+  width: 100%;
+}
+
+.hero-cta__tab {
+  flex: 0 0 33.333%;
+  text-align: center;
+  padding: 5px 10px;
+  /*   color: #fff; */
+  /*   font-weight: 700; */
+}
+
+.hero-cta__tab--tel {
+  background: var(--tel);
+}
+
+.hero-cta__tab--mail {
+  background: var(--mail);
+}
+
+.hero-cta__tab--line {
+  background: var(--line);
+}
+
+/* Box下のライン */
+.line-bottom {
+  display: flex;
+  width: 100%;
+  max-width: 670px;
+}
+
+.line-bottom-inner {
+  width: 50%;
+}
+
+.line-bottom-left {
+  border-top: 15px solid #FFA75E;
+}
+
+.line-bottom-right {
+  border-top: 15px solid #376FB9;
+}
+
+
+/* 3カラムボタン*/
+.hero-cta__body {
+  display: flex;
+  width: 100%;
+  background: var(--white);
+  /*   height: 100%; */
+  font-family: "Zen Old Mincho", serif;
+}
+
+.hero-cta__col {
+  flex: 0 0 33.333%;
+  text-align: center;
+  /*   padding: 14px 10px 18px; */
+  /*   box-sizing: border-box; */
+  /*   border-right: 1px solid #f0f0f0; */
+}
+
+.hero-cta__col:last-child {
+  border-right: none;
+}
+
+/* 電話部分 */
+.hero-cta__tel {
+  font-size: 2.8rem;
+  /*   font-weight: 700; */
+  /*   margin-bottom: 2px; */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-cta__time {
+  font-size: 1.1rem;
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+/* メール・LINE テキスト */
+.hero-cta__text {
+  font-size: 2.0rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-img {
+  margin-right: 6px;
+  width: 13px;
+  height: 13px;
+}
+
+.icon-img-tel {
+  width: 22px;
+  height: 24px;
+  margin: 9px 6px 0 0;
+}
+
+.icon-img-mail {
+  width: 20px;
+  height: 20px;
+  margin: 5px 6px 0 0;
+}
+
+.icon-img-line {
+  width: 25px;
+  height: auto;
+  margin: 3px 6px 0 0;
+}
+
+
+/* 右上の丸バッジ */
+.hero-cta__badge {
+  font-family: "Noto Sans JP", sans-serif;
+  position: absolute;
+  right: 15px;
+  top: -75px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #4DC764;
+  color: var(--white);
+  text-align: center;
+  /*   display: flex; */
+  /*   flex-direction: column; */
+  /*   align-items: center; */
+  /*   justify-content: center; */
+}
+
+.hero-cta__badge::before {
+  position: absolute;
+  content: "";
+  right: 98px;
+  top: 92px;
+  border-style: solid;
+  border-radius: 5px;
+  border-right: 11px solid transparent;
+  border-left: 11px solid transparent;
+  border-bottom: 22px solid #4dc764;
+  border-top: 0;
+  transform: rotate(230deg);
+}
+
+.hero-cta__badge-sub {
+  font-size: 10px;
+  /*   margin-bottom: 2px; */
+  margin: 21px 0 0;
+  line-height: 0.5;
+}
+
+.hero-cta__badge-main {
+  font-size: 3.0rem;
+  font-weight: 500;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.five {
+  font-size: 6.0rem;
+  font-weight: 600;
+}
+
+.percent {
+  font-size: 3.8rem;
+  font-weight: 600;
+}
+
+.hero-cta__col--tel {
+  background: var(--tel_bg);
+}
+
+.hero-cta__col--mail {
+  background: var(--mail_bg);
+}
+
+.hero-cta__col--line {
+  background: var(--line_bg);
+}
+
+.tel-line {
+  font-family: "Noto Sans JP", sans-serif;
+  background: var(--tel);
+  color: var(--white);
+  width: 160px;
+  border-radius: 50px;
+  padding: 5px 20px;
+  margin: 8px 0 0;
+}
+
+.mail-line {
+  font-family: "Noto Sans JP", sans-serif;
+  background: var(--mail);
+  color: var(--white);
+  width: 230px;
+  border-radius: 50px;
+  padding: 5px 20px;
+  margin: 8px 0 8px;
+}
+
+.line-line {
+  font-family: "Noto Sans JP", sans-serif;
+  background: var(--line);
+  color: var(--white);
+  width: 230px;
+  border-radius: 50px;
+  padding: 5px 20px;
+  margin: 8px 0 8px;
+}
+
+.br-sp {
+  display: none;
+}
+
+
+/* SP
+------------------------------------------ */
+@media (max-width: 768px) {
+  .hero__panel {
+    padding: 30px 20px 40px;
+  }
+
+  .hero__tagline {
+    font-size: 2.5rem;
+  }
+
+  .hero__sub {
+    font-size: 1.4rem;
+  }
+
+  .hero__count span {
+    font-size: 2.6rem;
+  }
+
+  .hero__free {
+    font-size: 2.2rem;
+  }
+
+  .popup-img-pc {
+    display: none;
+  }
+
+  .popup-img-sp {
+    display: inline-block;
+  }
+
+  .hero-cta__tabs,
+  .hero-cta__body {
+    flex-direction: column;
+  }
+
+  .hero-cta__tab,
+  .hero-cta__col {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .hero-cta__badge {
+    right: 4px;
+    top: 170px;
+    width: 77px;
+    height: 77px;
+  }
+
+  .five {
+    font-size: 2.6rem;
+  }
+
+  .percent {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+  }
+
+  .hero-cta__tel {
+    font-size: 2.2rem;
+  }
+
+  .hero-cta__time {
+    font-size: 1.0rem;
+  }
+
+  .btn-box {
+    height: 85px;
+  }
+
+  .br-sp {
+    display: block;
+  }
+
+  .hero-cta__badge-sub {
+    margin: 3px 0 0;
+    line-height: 1.2;
+  }
+
+  .hero-cta__badge-main {
+    font-size: 2rem;
+  }
+
+  .hero-cta__badge::before {
+    right: 64px;
+    top: 55px;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+    border-bottom: 18px solid #4dc764;
+  }
+}
+
+.none {
+  height: 800px;
+  background: #555;
+}
+
+footer {
+  height: 200px;
+  background: #555;
+}
